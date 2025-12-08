@@ -1,13 +1,24 @@
-<h2>Registrar Paciente</h2>
-<input id="nombres" placeholder="Nombres"><br>
-<input id="apellidos" placeholder="Apellidos"><br>
-<input id="dni" placeholder="DNI"><br>
-<input type="date" id="fecha"><br>
-<select id="sexo">
-  <option value="M">Masculino</option>
-  <option value="F">Femenino</option>
-</select><br><br>
-<button onclick="registrar()">Guardar</button>
-<p id="msg"></p>
+<link rel="stylesheet" href="css/styles.css">
+
+<div class="nav">
+  <a href="dashboard.html">Inicio</a>
+</div>
+
+<div class="container">
+  <h2>Registrar Paciente</h2>
+
+  <input id="nombres" placeholder="Nombres">
+  <input id="apellidos" placeholder="Apellidos">
+  <input id="dni" placeholder="DNI">
+  <input type="date" id="fecha">
+  
+  <select id="sexo">
+    <option value="M">Masculino</option>
+    <option value="F">Femenino</option>
+  </select>
+
+  <button onclick="registrar()">Guardar</button>
+  <p class="msg" id="msg"></p>
+</div>
 
 <script src="js/pacientes.js"></script>

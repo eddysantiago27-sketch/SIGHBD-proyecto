@@ -1,9 +1,19 @@
-<h2>Programar Cita</h2>
-<input type="number" id="idPaciente" placeholder="ID Paciente"><br>
-<input type="number" id="idMedico" placeholder="ID Médico"><br>
-<input type="date" id="fecha"><br>
-<input type="time" id="hora"><br><br>
-<button onclick="guardarCita()">Programar</button>
-<p id="msg"></p>
+<link rel="stylesheet" href="css/styles.css">
+
+<div class="nav">
+  <a href="dashboard.html">Inicio</a>
+</div>
+
+<div class="container">
+  <h2>Programar Cita</h2>
+
+  <input type="number" id="idPaciente" placeholder="ID Paciente">
+  <input type="number" id="idMedico" placeholder="ID Médico">
+  <input type="date" id="fecha">
+  <input type="time" id="hora">
+
+  <button onclick="guardarCita()">Programar</button>
+  <p class="msg" id="msg"></p>
+</div>
 
 <script src="js/citas.js"></script>

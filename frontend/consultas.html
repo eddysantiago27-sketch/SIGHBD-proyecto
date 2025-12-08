@@ -1,8 +1,18 @@
-<h2>Registrar Consulta</h2>
-<input type="number" id="idCita" placeholder="ID Cita"><br>
-<textarea id="diag" placeholder="Diagnóstico"></textarea><br>
-<textarea id="trat" placeholder="Tratamiento"></textarea><br><br>
-<button onclick="guardarConsulta()">Guardar</button>
-<p id="msg"></p>
+<link rel="stylesheet" href="css/styles.css">
+
+<div class="nav">
+  <a href="dashboard.html">Inicio</a>
+</div>
+
+<div class="container">
+  <h2>Registrar Consulta</h2>
+
+  <input type="number" id="idCita" placeholder="ID Cita">
+  <textarea id="diag" placeholder="Diagnóstico"></textarea>
+  <textarea id="trat" placeholder="Tratamiento"></textarea>
+
+  <button onclick="guardarConsulta()">Guardar</button>
+  <p class="msg" id="msg"></p>
+</div>
 
 <script src="js/consultas.js"></script>

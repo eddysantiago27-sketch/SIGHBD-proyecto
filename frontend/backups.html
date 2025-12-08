@@ -1,7 +1,17 @@
-<h2>Backups</h2>
-<button onclick="backup('full')">Full</button>
-<button onclick="backup('diff')">Diferencial</button>
-<button onclick="backup('log')">Log</button>
-<p id="msg"></p>
+<link rel="stylesheet" href="css/styles.css">
+
+<div class="nav">
+  <a href="dashboard.html">Inicio</a>
+</div>
+
+<div class="container">
+  <h2>Backups</h2>
+
+  <button onclick="backup('full')">Full Backup</button>
+  <button onclick="backup('diff')">Backup Diferencial</button>
+  <button onclick="backup('log')">Backup de Log</button>
+
+  <p class="msg" id="msg"></p>
+</div>
 
 <script src="js/backups.js"></script>
