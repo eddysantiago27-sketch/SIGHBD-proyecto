@@ -168,7 +168,7 @@ CREATE TABLE Medicamentos (
  FormaFarmaceutica VARCHAR(50) NOT NULL,
  UnidadMedida VARCHAR(20) NOT NULL,
  StockMinimo INT DEFAULT 10,
- tockActual INT DEFAULT 0,
+ StockActual INT DEFAULT 0,
  PrecioUnitario DECIMAL(10,2),
  RequiereReceta BIT DEFAULT 1,
  Estado CHAR(1) DEFAULT 'A' CHECK (Estado IN ('A','I'))
