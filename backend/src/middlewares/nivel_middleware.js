@@ -13,4 +13,4 @@ const VerificarNivel = (nivelMaximoPermitido) => {
         next();
     };
 };
-module.exports = { VerificarNivel };
+module.exports = {VerificarNivel};

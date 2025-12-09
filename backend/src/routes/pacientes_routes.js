@@ -3,12 +3,12 @@ const router = express.Router();
 
 const { registrarPaciente } = require('../controllers/pacientes_controller');
 const { verificarToken } = require('../middlewares/auth_middleware');
-const { verificarPermiso } = require('../middlewares/permisos_middleware');
+const { VerificarNivel } = require('../middlewares/nivel_middleware');
 
 router.post(
   '/registrar',
   verificarToken,
-  verificarNivel(4),
+  VerificarNivel(4),
   registrarPaciente
 );
 

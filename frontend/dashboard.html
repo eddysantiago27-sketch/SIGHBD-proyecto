@@ -12,7 +12,37 @@
   <a href="consultas.html">Consultas</a>
   <a href="auditoria.html">Auditoría</a>
   <a href="backups.html">Backups</a>
+  <button id="btnLogout" style="
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+">
+  Cerrar sesión
+</button>
 </div>
+
+<script>
+  const btnLogout = document.getElementById('btnLogout');
+
+  btnLogout.addEventListener('click', () => {
+    // Eliminar el token
+    localStorage.removeItem('token');
+    localStorage.removeItem('usuario');
+
+    // Redirigir al login
+    window.location.href = "index.html";
+  
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = "index.html";
+    }
+  });
+</script>
+
 
 <div class="card">
   <h1>Sistema SIGH</h1>

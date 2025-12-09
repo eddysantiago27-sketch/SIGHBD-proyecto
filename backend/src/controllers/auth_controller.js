@@ -22,11 +22,11 @@ const login = async (req, res) => {
       u.IdRol,
       r.NombreRol,
       r.Nivel,
-      u.CuentaBloqueada,
+      u.CuentaBloqueada
       FROM USUARIOS u
-      INNER JOIN Roler r ON u.IdRol = r.IdRol
+      INNER JOIN Roles r ON u.IdRol = r.IdRol
       WHERE u.NombreUsuario = @usuario
-      AND u.PasswordHash = HASHBYTES('SHA2_512', CONVERT(VARBYNARY(100), @password) +u.PasswordSalt)
+      AND u.PasswordHash = HASHBYTES('SHA2_512', CONVERT(VARBINARY(100), @password) +u.PasswordSalt)
     `;
 
     const result = await pool.request()
@@ -64,7 +64,7 @@ const login = async (req, res) => {
     });
 
   } catch (error) {
-    console.error("❌ ERROR REAL:", error);
+    console.error("ERROR REAL:", error);
     res.status(500).json({
       message: 'Error en login',
       detalle: error.message

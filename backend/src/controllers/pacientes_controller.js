@@ -7,7 +7,8 @@ const registrarPaciente = async (req, res) => {
       apellidos,
       dni,
       fecha_nacimiento,
-      sexo
+      sexo,
+      direccion
     } = req.body;
 
     const pool = await poolPromise;
@@ -18,12 +19,14 @@ const registrarPaciente = async (req, res) => {
       .input('DNI', sql.VarChar, dni)
       .input('FechaNacimiento', sql.Date, fecha_nacimiento)
       .input('Sexo', sql.Char, sexo)
+      .input('Direccion', sql.NVarChar(200), direccion)
       .execute('SP_RegistrarPaciente');
 
     res.json({ message: 'Paciente registrado correctamente' });
 
   } catch (error) {
-    res.status(500).json({ message: 'Error al registrar paciente', error });
+    console.error('Error al registrar paciente:', error);
+    res.status(500).json({ message: 'Error al registrar paciente', detalle: error.message });
   }
 };
 

@@ -6,7 +6,8 @@ async function registrar() {
     apellidos: document.getElementById("apellidos").value,
     dni: document.getElementById("dni").value,
     fecha_nacimiento: document.getElementById("fecha").value,
-    sexo: document.getElementById("sexo").value
+    sexo: document.getElementById("sexo").value,
+    direccion: document.getElementById("direccion").value
   };
 
   const res = await fetch(`${API}/pacientes/registrar`, {
